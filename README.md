@@ -12,3 +12,7 @@ If you find any issues or have suggestions for improving this repository, please
 
 ## License
 This repository is licensed under the MIT License. See the LICENSE file for more information.
+
+# Notes
+## Lecture 01
+Composable Functions can only be called from other composable functions
