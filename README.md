@@ -14,11 +14,11 @@ If you find any issues or have suggestions for improving this repository, please
 This repository is licensed under the MIT License. See the LICENSE file for more information.
 
 # Notes
-## Lecture 02-02
+## Lecture 02-02 - Composable Functions
 - Composable Functions can only be called from other composable functions
 - Composable Funcitons wiht non-default parameters are not supported in @Preview
 
-## Lecture 02-03
+## Lecture 02-03 - Compose Terminology
 - Traditional way of changing the view
 ```kt
 findViewbById(), btn.setText(), img.setImageBitmap(bmp)
@@ -27,5 +27,5 @@ findViewbById(), btn.setText(), img.setImageBitmap(bmp)
 - as Composable functions are written in kotlin rather than in XML, they can be as dynamic as normal Kotlin code.
 - Recomposition: Every time the values are changed, the Composable functions are recomposed to update the previous value. Unlike XML, the composable function is intellignet enough to recompose only those funcitons which are updated.
 
-## Lecture 02-04
+## Lecture 02-04 - Layouts
 - In compose you build UI Hierarchy by calling composable functions from other composable functions
