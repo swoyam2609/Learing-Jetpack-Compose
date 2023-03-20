@@ -29,3 +29,14 @@ findViewbById(), btn.setText(), img.setImageBitmap(bmp)
 
 ## Lecture 02-04 - Layouts
 - In compose you build UI Hierarchy by calling composable functions from other composable functions
+- Inserting an image in the App
+```kt
+Image(painter = painterResource(id = R.drawable.profilepicture), contentDescription = "Profile Picture")
+``` 
+- To design the composable functions, we use Modifiers in jetpack compose.
+- Modifiers allows us to change the composible sizes, layout, appearance and add high level interactions
+```kt
+Row(modifier = Modifier.padding(10.dp)
+```
+
+## Lecture 02-05 - Material Design and Theming
