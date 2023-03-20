@@ -92,3 +92,24 @@ CompositionLocalProvider(LocalContentAlpha provides  ContentAlpha.medium) {
                 Text(text = profile.description)
             }
 ```
+- Changing the Font Size of a text
+```kt
+Text(text = profile.name, style = MaterialTheme.typography.h3)
+```
+
+- In Compose you need to manually define custom typography in `app/src/main/java/com/example/myfirstcomposeapp/ui/theme/Type.kt`
+```kt
+val Typography = Typography(
+    body1 = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp
+    )
+)
+```
+- Change a particular item as per the night mode
+```kotlin
+//Here I have changed an image as per the value whether the dark mode is enabled or not
+painter = painterResource(id = if(isSystemInDarkTheme()){R.drawable.profilepicture} else {R.drawable.profilepicturedark})
+
+```
