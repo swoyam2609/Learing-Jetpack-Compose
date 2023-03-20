@@ -113,3 +113,9 @@ val Typography = Typography(
 painter = painterResource(id = if(isSystemInDarkTheme()){R.drawable.profilepicture} else {R.drawable.profilepicturedark})
 
 ```
+- Adding Color to the background
+```kt
+Row(modifier = Modifier.background(color = Color.Gray).padding(horizontal = 5.dp, vertical = 10.dp))
+```
+
+
