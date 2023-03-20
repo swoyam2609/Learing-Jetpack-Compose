@@ -80,3 +80,15 @@ private val LightColorPalette = lightColors(
     secondary = Teal200
 )
 ```
+- In compose, we can use the `CompositionLocalProvider` to set the importance of a particular widget
+```kt
+//High Importance
+CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.high) {
+                Text(text = profile.name)
+            }
+            
+//Medium Importance
+CompositionLocalProvider(LocalContentAlpha provides  ContentAlpha.medium) {
+                Text(text = profile.description)
+            }
+```
