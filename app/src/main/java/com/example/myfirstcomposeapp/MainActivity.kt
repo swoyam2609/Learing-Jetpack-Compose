@@ -86,17 +86,31 @@ fun ProfileCard(profile: Profile) {
 fun DetailsCard(profile: Profile) {
     Row(
         modifier = Modifier
-            .background(color = Color.Green)
+            .background(color = Color.Blue)
     ) {
-        Column(modifier = Modifier.weight(1f)) {
+        Column() {
             Text(
                 text = "Student Id",
                 color = Color.White,
                 style = TextStyle(fontWeight = FontWeight.Bold),
             )
+            Text(
+                text = "B121065",
+                color = Color.White,
+                style = TextStyle(fontWeight = FontWeight.Normal),
+            )
         }
-        Column(modifier = Modifier.weight(1f)) {
-
+        Column() {
+            Text(
+                text = "GPA",
+                color = Color.White,
+                style = TextStyle(fontWeight = FontWeight.Bold)
+            )
+            Text(
+                text = "7.86",
+                color = Color.White,
+                style = TextStyle(fontWeight = FontWeight.Normal),
+            )
         }
     }
 }
