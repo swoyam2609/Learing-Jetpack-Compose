@@ -117,5 +117,12 @@ painter = painterResource(id = if(isSystemInDarkTheme()){R.drawable.profilepictu
 ```kt
 Row(modifier = Modifier.background(color = Color.Gray).padding(horizontal = 5.dp, vertical = 10.dp))
 ```
-
-
+- Making a widget clickable
+```kt
+Row(
+        modifier = Modifier
+            .clickable { }
+            .background(color = Color.Gray)
+            .padding(horizontal = 5.dp, vertical = 10.dp)
+```
+## Lecture 02-07 Lists
