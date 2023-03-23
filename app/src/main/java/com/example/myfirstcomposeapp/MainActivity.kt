@@ -5,12 +5,8 @@ import android.os.Bundle
 import android.telecom.Call.Details
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.RowScopeInstance.weight
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
@@ -30,7 +26,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ProfileCard(profile = Profile("Swoyam", "Kotlin Developer", 121065, 7.86f))
-            DetailsCard(profile = Profile("Swoyam", "Kotlin Developer", 121065, 7.86f))
         }
     }
 }
@@ -41,6 +36,7 @@ data class Profile(val name: String, val description: String, val id: Int, val g
 fun ProfileCard(profile: Profile) {
     Row(
         modifier = Modifier
+            .clickable { }
             .background(color = Color.Gray)
             .padding(horizontal = 5.dp, vertical = 10.dp)
     ) {
@@ -80,37 +76,4 @@ fun ProfileCard(profile: Profile) {
         }
     }
 
-}
-
-@Composable
-fun DetailsCard(profile: Profile) {
-    Row(
-        modifier = Modifier
-            .background(color = Color.Blue)
-    ) {
-        Column() {
-            Text(
-                text = "Student Id",
-                color = Color.White,
-                style = TextStyle(fontWeight = FontWeight.Bold),
-            )
-            Text(
-                text = "B121065",
-                color = Color.White,
-                style = TextStyle(fontWeight = FontWeight.Normal),
-            )
-        }
-        Column() {
-            Text(
-                text = "GPA",
-                color = Color.White,
-                style = TextStyle(fontWeight = FontWeight.Bold)
-            )
-            Text(
-                text = "7.86",
-                color = Color.White,
-                style = TextStyle(fontWeight = FontWeight.Normal),
-            )
-        }
-    }
 }
